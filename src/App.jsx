@@ -2,19 +2,16 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import App from './Components/Pokemoncard'
+import PokemonCard from './Components/PokemonCard'
 
-function Bulb() {
+
+function App() {
+  
   return (
-    <div>
-       <figure>
-           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-           alt="bulbasaur"/>
-           <figcaption>bulbasaur</figcaption>
-        </figure>
-      
-    </div>
+      <div>
+      <PokemonCard />
+      </div>
   )
 }
 
-export default Bulb
+export default App;

@@ -18,6 +18,24 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.cardImg {
+  padding: 20px;
+  background-color: bisque;
+  border-radius: 10px;
+}
+
+.noImg {
+  padding: 15px;
+  background-color: chocolate;
+  border-radius: 10px;
+}
+
+.cardText {
+  padding: 15px;
+  background-color: darkgoldenrod;
+  border-radius: 10px;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
