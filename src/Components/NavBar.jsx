@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 
 
-function NavBar(prev, next) {
+function NavBar({previous, next, pokemonIndex}) {
+    
     return (
      <div>
-        <button onClick={prev}>Précédent</button>
+        <button onClick={previous}>Précédent</button>
         <button onClick={next}>Suivant</button>
      </div>
     )

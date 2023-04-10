@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import PokemonCard from './Components/PokemonCard'
-import NavBar from './Components/NavBar';
+import NavBar from './Components/NavBar'
+import {useEffect} from 'react'
 
 const pokemonList = [
   {
@@ -29,20 +30,33 @@ const pokemonList = [
     },
   ];
 
+
+  
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0)
 
   const handleNextClick = () => setPokemonIndex(pokemonIndex + 1);
   
   const handlePrevClick = () => setPokemonIndex(pokemonIndex - 1);
+
+  useEffect(() => {
+    console.log("welcome this is an automatic message")
+    alert('hello pokemon trainer :)')
+  },
+    [])
+   
+    useEffect(() => {
+      if (pokemonList[pokemonIndex].name === "PIKACHU") {
+        alert("pika pikachu !!!")
+      }
+    }, [pokemonIndex, pokemonList])
   
   return ( 
       <div>
      <nav>
       <PokemonCard pokemon = {pokemonList[pokemonIndex]}/>
-      {pokemonIndex > 0 && <button onClick={handlePrevClick}>Précédent</button>}
-      {pokemonIndex < pokemonList.length - 1 && <button onClick={handleNextClick}>Suivant</button>}
-      <NavBar prev={handlePrevClick} next={handleNextClick} />
+      
+      <NavBar previous={handlePrevClick} next={handleNextClick} pokemonIndex= {pokemonIndex} />
       </nav>
       </div>
   )
