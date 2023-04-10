@@ -6,7 +6,7 @@ function PokemonCard({pokemon}) {
   
   console.log(pokemon)
   
-  PokemonCard.PropTypes = {
+  PokemonCard.propTypes = {
     pokemon: PropTypes.shape({
       name: PropTypes.string.isRequired,
       imgSrc: PropTypes.string
@@ -15,14 +15,11 @@ function PokemonCard({pokemon}) {
 
   return (
 
-     <>
-      <figure className="card">
-         <img className="cardImg" src={pokemon.imgSrc} alt={pokemon.name}></img>
-         <figcaption className="cardText">{pokemon.name}</figcaption>
-         <p className="noImg">???</p>
-      </figure>
-      </>
-  )
+    <figure className="card">
+      <img className="cardImg" src={pokemon.imgSrc} alt={pokemon.name}></img> <p className="noImg">???</p>
+      <figcaption className="cardText">{pokemon.name}</figcaption>
+    </figure>
+    )
 }
 
 export default PokemonCard;

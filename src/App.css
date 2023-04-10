@@ -56,3 +56,12 @@ p {
  
 }
 
+.block {
+  display: flex;
+  margin: auto;
+}
+
+button {
+  border-radius: 10px;
+  background-color: rgb(130, 126, 196);
+}
